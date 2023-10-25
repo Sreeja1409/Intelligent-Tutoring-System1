@@ -1,0 +1,157 @@
+import java.util.Scanner;
+
+public class StudentInteractionEvaluation {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+String studentName;
+int numPosts, numReplies, numQuestions;
+
+// get student name
+System.out.print(&quot;Enter student name: &quot;);
+studentName = input.nextLine();
+
+// get number of posts
+System.out.print(&quot;Enter number of posts made by &quot; + studentName + &quot;: &quot;);
+numPosts = input.nextInt();
+
+// get number of replies
+System.out.print(&quot;Enter number of replies made by &quot; + studentName + &quot;: &quot;);
+
+numReplies = input.nextInt();
+
+// get number of questions
+System.out.print(&quot;Enter number of questions asked by &quot; + studentName + &quot;: &quot;);
+numQuestions = input.nextInt();
+
+// calculate interaction score
+double interactionScore = calculateInteractionScore(numPosts, numReplies, numQuestions);
+
+// print evaluation result
+System.out.println(&quot;\n&quot; + studentName + &quot;&#39;s interaction score is: &quot; + interactionScore);
+System.out.println(evaluateInteraction(interactionScore));
+}
+
+public static double calculateInteractionScore(int numPosts, int numReplies, int numQuestions) {
+// calculate interaction score using a weighted formula
+double postWeight = 0.5;
+double replyWeight = 0.3;
+double questionWeight = 0.2;
+return (numPosts * postWeight) + (numReplies * replyWeight) + (numQuestions *
+questionWeight);
+}
+
+public static String evaluateInteraction(double interactionScore) {
+// evaluate interaction score and return evaluation result
+if (interactionScore &gt;= 8) {
+return &quot;Excellent interaction!&quot;;
+} else if (interactionScore &gt;= 6) {
+return &quot;Good interaction!&quot;;
+} else if (interactionScore &gt;= 4) {
+return &quot;Average interaction.&quot;;
+
+} else {
+return &quot;Poor interaction. Please engage more with the course.&quot;;
+}
+}
+}
+
+
+
+Appearing the assessment in java:
+
+import java.util.Scanner;
+
+public class OnlineAssessmentAppearing {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+String studentName;
+int numAttempts, maxAttempts;
+
+// get student name
+System.out.print(&quot;Enter student name: &quot;);
+
+studentName = input.nextLine();
+
+// get number of attempts
+System.out.print(&quot;Enter number of attempts made by &quot; + studentName + &quot;: &quot;);
+numAttempts = input.nextInt();
+
+// get maximum number of attempts
+System.out.print(&quot;Enter maximum number of attempts allowed: &quot;);
+maxAttempts = input.nextInt();
+
+// calculate remaining attempts
+int remainingAttempts = calculateRemainingAttempts(numAttempts, maxAttempts);
+
+// print appearing result
+System.out.println(&quot;\n&quot; + studentName + &quot;&#39;s remaining attempts: &quot; + remainingAttempts);
+System.out.println(evaluateAppearing(remainingAttempts));
+}
+
+public static int calculateRemainingAttempts(int numAttempts, int maxAttempts) {
+// calculate remaining attempts
+return maxAttempts - numAttempts;
+}
+
+public static String evaluateAppearing(int remainingAttempts) {
+// evaluate remaining attempts and return evaluation result
+if (remainingAttempts &gt; 0) {
+return &quot;You have &quot; + remainingAttempts + &quot; attempts remaining.&quot;;
+} else if (remainingAttempts == 0) {
+return &quot;This was your last attempt.&quot;;
+} else {
+
+return &quot;You have exceeded the maximum number of attempts. Please contact your
+instructor.&quot;;
+}
+}
+}
+
+
+
+online student evaluation and assessment student behaviour finding code whether he
+is active or inactive using java
+import java.util.Scanner;
+public class StudentBehavior {
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+String studentName;
+int numLogins, numPosts, numReplies, numQuestions;
+// get student name
+System.out.print(&quot;Enter student name: &quot;);
+studentName = input.nextLine();
+
+// get number of logins
+System.out.print(&quot;Enter number of logins made by &quot; + studentName + &quot;: &quot;);
+numLogins = input.nextInt();
+
+// get number of posts
+
+System.out.print(&quot;Enter number of posts made by &quot; + studentName + &quot;: &quot;);
+numPosts = input.nextInt();
+
+// get number of replies
+System.out.print(&quot;Enter number of replies made by &quot; + studentName + &quot;: &quot;);
+numReplies = input.nextInt();
+
+// get number of questions
+System.out.print(&quot;Enter number of questions asked by &quot; + studentName + &quot;: &quot;);
+numQuestions = input.nextInt();
+
+// determine student behavior
+String behavior = determineBehavior(numLogins, numPosts, numReplies, numQuestions);
+
+// print behavior result
+System.out.println(&quot;\n&quot; + studentName + &quot; is &quot; + behavior);
+}
+
+public static String determineBehavior(int numLogins, int numPosts, int numReplies, int
+numQuestions) {
+// determine if student is active or inactive based on number of logins and interactions
+if (numLogins &gt; 0 &amp;&amp; (numPosts &gt; 0 || numReplies &gt; 0 || numQuestions &gt; 0)) {
+return &quot;active&quot;;
+} else {
+return &quot;inactive&quot;;
+}
+}
+}
